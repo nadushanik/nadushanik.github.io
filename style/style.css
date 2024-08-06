@@ -75,11 +75,35 @@ body {
 .brends__cards--logo {
     padding: 16px 0 16px 16px;
 }
-  
+.brends__cards--btn{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #FF3E79;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    cursor: pointer;
+} 
+.brends__cards--btn:after{
+    position: absolute;
+    top: 13px;;
+    left: 12px;
+    content: '';
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-left: 3px solid #FF3E79;
+    border-bottom: 3px solid #FF3E79;
+    border-radius: 20%;
+    transform: rotate(-135deg);
+    background-color: #FFFFFF;
+}
+
 .brends__cards--arrow {
     padding: 16px 16px 16px 0;
     max-width: 100%;
 }
+
 @media (min-width: 0px) and (max-width: 550px) {
     .brends__items {
       display: flex;
