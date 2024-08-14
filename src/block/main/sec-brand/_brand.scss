@@ -1,0 +1,97 @@
+.brends {
+    @media screen and (max-width: $screen-sm) {
+        margin: 16px;
+    }
+    &__title {
+        display: inline-block;
+        font-size: $text-middle;
+        color: $text-gray;
+        padding: 24px 16px 0 16px;
+        font-weight: 400;
+        }
+
+    &__items {
+        display: inline-block;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        padding-left: 20px;
+        max-height: 160px;
+        transition: max-height 0.5s ease;
+        @media (max-width: $screen-sm) {
+              flex-wrap: nowrap;
+              padding: 0 0 20px 0;
+        }
+        @media (min-width: $screen-sm) {
+            max-height: 160px !important;
+            overflow: hidden !important;
+      }
+    }
+
+    &__cards {
+        background-color: $bg-white;
+        border: 1px #EAEAEA;
+        border-radius: 10px;
+        @include flex-sb-c(0);
+        max-width: 240px;
+        max-height: 72px;
+        margin-right: 24px;
+        margin-bottom: 16px;
+        @media screen and (max-width: $screen-sm) {
+            width: 224px;
+        }
+    }
+
+    &__cards--logo {
+        padding: 16px 0 16px 16px;
+    }
+
+    &__cards--btn {
+        position: relative;
+        @include wh;
+        border: 3px solid $pink;
+        border-radius: 50%;
+        background-color: #FFFFFF;
+        cursor: pointer;
+    }
+    &__cards--btn:after{
+        position: absolute;
+        top: 13px;;
+        left: 12px;
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+        border-left: 3px solid $pink;
+        border-bottom: 3px solid $pink;
+        border-radius: 20%;
+        transform: rotate(-135deg);
+        background-color: $bg-white;
+    }
+    &__cards--arrow{
+        padding: 16px 16px 16px 0;
+        max-width: 100%;
+    }
+    &__btn{
+        color: $text-black;
+        font-weight: 100;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-top: 20px;
+        @media (max-width: $screen-sm){
+            @include hide;
+        }
+    }
+}
+.rotate {
+    transform: rotate(180deg);
+}
+.collapsed {
+    max-height: 160px !important;
+}
+
+.expanded {
+    max-height: none !important;
+}

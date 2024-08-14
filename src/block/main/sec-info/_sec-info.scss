@@ -1,0 +1,52 @@
+.description{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    @media  (max-width: $screen-sm) {
+          grid-template-columns: repeat(1, 1fr);
+    }
+    &__img img{
+
+        @media screen and (min-width: $screen-xs) {
+            width: 320px;
+        };
+        @media screen and (min-width: $screen-md) {
+            width: 360px;
+        };
+        @media screen and (min-width: $screen-xl) {
+            width: 532px;
+        };
+    };
+    &__img img {
+        @media screen and (min-width: $screen-sm) {
+            border-radius: 6px;
+        };
+    };
+}
+.description-company{
+    padding-left: 34px;
+    color: $text-gray;
+    @media  (max-width: $screen-sm){
+        padding-left: 24px;
+    }
+    @media  (max-width: $screen-xs){
+        padding-left: 16px;
+    }
+    &__further{
+        letter-spacing:-0.2px;
+        color: $text-black;
+        font-weight: 100;
+        @media  (min-width: 1030px){
+            @include hide;
+        }
+    }
+    &__texti{
+        @include hide;
+        @media  (min-width: 1030px){
+            display: block;
+        }
+    }
+}
+.expend{
+    display: block;
+}

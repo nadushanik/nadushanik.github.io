@@ -1,0 +1,45 @@
+* {
+    box-sizing:border-box;
+  };
+
+  body {
+    font-family: $font;
+    background-color: $bg-gray;
+  };
+ button {
+    background-color: transparent;
+    border: none;
+    font-family: $font;
+    max-height: 40px;
+    font-weight: 500;
+    font-size: $text-middle;
+    line-height: 150%;
+    padding: 0;
+    @include flex-fs-c(0);
+    cursor: pointer;
+    justify-content: center;
+    opacity: 90%;
+        transition: 300ms ease-in-out;
+        &:hover {
+            opacity: 100%;
+        };
+}; 
+a {
+    text-decoration: none;
+    height: 40px;
+    font-weight: 400;
+    color: $text-gray;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+};
+.hide {
+    @include hide;
+};
+.rotate {
+    transform: rotateX(180deg);
+};
+input, textarea{
+    font-family: $font;
+    font-size: $text-middle;
+}

@@ -1,0 +1,87 @@
+.modal-call{
+    &__box{
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: $bg-white;
+    width: 440px;
+    height: 100%;
+    @media screen and (max-width: $screen-sm) { 
+        width: 320px;
+    };
+    }
+    &__box, .hidenn{
+            display: none;
+    }
+    &__title{
+        font-size: $text-main;
+        color: $text-black;
+        padding: 40px 0 24px 16px;
+    }
+    &__title:before{
+        content: "";
+        background-image: url('./images/pointer/highlight.svg');
+        width: 4px;
+        height: 35px;
+        left: 0;
+        gap: 0px;
+        position: absolute;
+        display: inline-block;
+    }
+    &__button{
+        padding: 24px 0 0 16px;
+    }
+    &__cloyse{
+        background: url('./images/icons-btn/cloyse.svg');
+        background-size: cover;
+        @include wh; 
+    }
+    &__text{
+        padding: 16px;
+        font-size: $text-low;
+        color: $text-gray;
+    }
+    &__text--pink{
+        color: $pink;
+    }
+    &__btn{
+        background-color: $pink;
+        border-radius: 35px;
+        position: absolute;
+        right: 32px;
+        cursor: pointer;
+        height: 32px;
+        width: 136px;
+        color: $bg-white;
+    }
+    input {
+        margin-left: 16px;
+        padding: 10px;
+        width: 100%;
+        max-width: 376px;
+        border: 2px solid $g-lightgray;
+        border-radius: 15px;
+        opacity: 0.5;
+      }
+}
+.call-clos{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: scroll;
+    -ms-overflow-width: none;
+            &::-webkit-scrollbar,
+            .scrollbar-non::-webkit-scrollbar {
+                display: none;
+        }
+}
+.call-open{
+    display: block;
+    position: fixed;
+    box-shadow: (16px 0px 52px 0px rgba(0, 0, 0, 0.2));
+    z-index: 9999999;
+}

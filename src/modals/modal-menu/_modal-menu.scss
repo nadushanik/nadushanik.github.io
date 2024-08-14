@@ -1,0 +1,47 @@
+
+.menu{
+    @media (min-width: 993px){
+        height: 1800px;
+        float: left;
+    }
+    &__box{
+    background: $bg-white;
+    width: 320px;
+    height: 100%;
+    @media screen and (max-width:360px) {
+        width:100%;
+    };
+    @include flex-fs-col(24px);
+    }
+    &__box, .hide{
+        @media screen and (max-width: $screen-lg) { 
+            display: none;
+        };
+    }
+    
+} 
+.open{
+    display: block;
+    position: fixed;
+    box-shadow: (16px 0px 52px 0px rgba(0, 0, 0, 0.2));
+    z-index: 9999999;
+}
+.clos{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: scroll;
+    -ms-overflow-width: none;
+            &::-webkit-scrollbar,
+            .scrollbar-non::-webkit-scrollbar {
+                display: none;
+        }
+}
+@import "./modal-content/menu-navigate";
+@import "./modal-footer/modal-footer";
+@import "./modal-header/modal-header";

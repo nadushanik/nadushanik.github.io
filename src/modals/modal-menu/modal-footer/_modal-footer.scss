@@ -1,0 +1,45 @@
+.menu-footer {
+    padding-left: 24px;
+    @include flex-fs-col(12px);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    &__call{
+        width: 40px;
+        height: 40px;
+        background: url('./images/icons-btn/call.svg');
+    }
+    &__chat{
+        width: 40px;
+        height: 40px;
+        background: url('./images/icons-btn/chat.svg');
+    }
+    &__profile{
+        width: 40px;
+        height: 40px;
+        background: url('./images/icons-btn/profile.svg');
+    }
+    &__btn-grup {
+        display: flex;
+        gap: 16px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    };
+
+    &__info {
+        @include flex-fs-col(0);
+    };
+
+    &__tel {
+        font-size: 24px;
+        font-weight: 700;
+    };
+
+    &__lang {
+        display: flex;
+        gap:10px;
+    };
+
+    &__lang-btn:hover, &__lang-btn:focus {
+        color: $text-gray;
+    };
+  }

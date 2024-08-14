@@ -1,0 +1,32 @@
+.footer{
+    &__box{ 
+        border-top: 1px solid $el-aquamarin;
+    color: $text-gray;
+    padding: 20px 32px;
+    @include flex-sb-c(10px);
+
+    @media screen and (max-width:$screen-sm) {
+        flex-direction: column;
+        justify-content: center;
+    };
+    }
+    &__one{
+        @media screen and (max-width:$screen-sm) {
+            justify-content: center;
+        };
+    }
+    &__two{
+            height: auto;
+            text-align: center;
+            color: $text-gray;
+            align-self: center;
+            opacity: 85%;
+            transition: 200ms ease-in-out;
+            &:hover {
+                opacity: 100%;
+            };
+        };
+    &__three {
+            text-align: right;
+    };
+}
